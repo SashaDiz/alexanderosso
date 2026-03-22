@@ -3,21 +3,110 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: #151518;
+  --bg-card: #1D1B1E;
+  --accent: #E85D2D;
+  --muted: #7A7A80;
+  --border: #2A282D;
+  --foreground: #F0EDE8;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+* {
+  cursor: none !important;
+}
+
+@media (max-width: 768px) {
+  * {
+    cursor: auto !important;
   }
+}
+
+html {
+  scroll-behavior: auto;
 }
 
 body {
   color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  font-family: var(--font-instrument), sans-serif;
+  overflow-x: hidden;
+}
+
+/* Grain overlay */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+}
+
+/* Custom cursor styles */
+.cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--foreground);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99999;
+  mix-blend-mode: difference;
+  transition: width 0.3s ease, height 0.3s ease, border 0.3s ease, background 0.3s ease;
+  transform: translate(-50%, -50%);
+}
+
+.cursor-dot.hover-link {
+  width: 52px;
+  height: 52px;
+  background: rgba(240, 237, 232, 0.1);
+  border-color: var(--foreground);
+}
+
+.cursor-dot.hover-cta {
+  width: 60px;
+  height: 60px;
+  background: rgba(232, 93, 45, 0.2);
+  border-color: var(--accent);
+  mix-blend-mode: normal;
+}
+
+/* Scroll reveal base */
+.sr {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+/* Selection */
+::selection {
+  background: rgba(232, 93, 45, 0.3);
+  color: var(--foreground);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted);
 }
 
 @layer utilities {
