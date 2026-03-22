@@ -8,10 +8,10 @@ export const metadata = {
 export default function SupportPage() {
   return (
     <>
-      <main className="flex-1 w-full max-w-2xl px-6 py-20">
+      <main className="flex-1 w-full max-w-3xl px-6 py-20">
         <Link
           href="/mulu"
-          className="text-xs text-muted hover:text-foreground transition-colors mb-8 inline-block"
+          className="text-sm text-muted hover:text-foreground transition-colors mb-8 inline-block"
         >
           &larr; Mulu
         </Link>
@@ -20,7 +20,7 @@ export default function SupportPage() {
           Support — Mulu
         </h1>
 
-        <div className="space-y-8 text-sm text-muted leading-relaxed">
+        <div className="space-y-8 text-base text-muted leading-relaxed">
           <section>
             <h2 className="text-accent font-display font-bold text-lg mb-2">
               Need Help?
@@ -47,7 +47,19 @@ export default function SupportPage() {
                 sashaossito@gmail.com
               </a>
             </p>
-            <p className="mt-2">
+            <ul className="list-disc pl-5 space-y-1 mt-4">
+              <li>
+                <strong className="text-foreground">Developer:</strong> Aleksandr
+                Borisov
+              </li>
+              <li>
+                <strong className="text-foreground">App:</strong> Mulu
+              </li>
+              <li>
+                <strong className="text-foreground">Location:</strong> Argentina
+              </li>
+            </ul>
+            <p className="mt-4">
               We typically respond within 1 to 2 business days.
             </p>
           </section>
