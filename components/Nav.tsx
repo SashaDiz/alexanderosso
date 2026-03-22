@@ -170,14 +170,31 @@ export default function Nav() {
           ))}
         </div>
 
-        {/* CTA */}
-        <MagneticButton
-          href="#cta"
-          dataCursorCta
-          className="bg-accent hover:bg-accent-hover text-white text-sm font-medium px-5 py-2.5 rounded-full transition-colors"
-        >
-          Book a call
-        </MagneticButton>
+        {/* Right side */}
+        <div className="flex items-center gap-3">
+          <a
+            href="/mulu"
+            data-cursor-hover
+            className="w-9 h-9 rounded-xl overflow-hidden hover:opacity-80 transition-opacity"
+            title="Mulu — Digital Detox Journal"
+          >
+            <img
+              src="/mulu/icon.png"
+              alt="Mulu app"
+              width={36}
+              height={36}
+              className="w-full h-full object-cover"
+            />
+          </a>
+
+          <MagneticButton
+            href="#cta"
+            dataCursorCta
+            className="bg-accent hover:bg-accent-hover text-white text-sm font-medium px-5 py-2.5 rounded-full transition-colors"
+          >
+            Book a call
+          </MagneticButton>
+        </div>
       </div>
 
       {/* Mobile nav */}
