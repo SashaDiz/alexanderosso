@@ -15,13 +15,14 @@ export default function MuluPage() {
       </div>
 
       {/* App Name */}
-      <h1 className="font-display font-bold text-4xl mb-1">Mulu</h1>
-      <p className="text-muted text-sm mb-4">Digital Detox Journal</p>
+      <h1 className="font-display font-bold text-5xl mb-4">
+        Mulu: Digital Detox Journal
+      </h1>
 
       {/* Description */}
-      <p className="text-muted text-lg max-w-sm leading-relaxed mb-8">
-        Turn doomscrolling into daily reflection. Block distracting apps
-        until you journal. Gentle digital detox in 2 minutes a day.
+      <p className="text-muted text-lg max-w-xl leading-relaxed mb-8">
+        Turn doomscrolling into daily reflection. Block distracting apps until
+        you journal. Gentle digital detox in 2 minutes a day.
       </p>
 
       {/* App Store Button */}
