@@ -27,7 +27,7 @@ export default function MuluPage() {
 
       {/* App Store Button */}
       <a
-        href="#"
+        href="https://apps.apple.com/us/app/mulu-digital-detox-journal/id6760852618"
         target="_blank"
         rel="noopener noreferrer"
         className="inline-flex items-center gap-2.5 bg-foreground text-bg font-medium px-6 py-3 rounded-xl hover:opacity-90 transition-opacity"
