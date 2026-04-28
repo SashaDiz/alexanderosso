@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Syne, Instrument_Sans, Space_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const syne = Syne({
@@ -44,6 +45,12 @@ export default function RootLayout({
         className={`${syne.variable} ${instrumentSans.variable} ${spaceMono.variable} font-body antialiased bg-bg text-foreground`}
       >
         {children}
+        <Script
+          src="https://datafa.st/js/script.js"
+          data-website-id="dfid_3BIna4PrR0xh52Vk38hof"
+          data-domain="alexanderosso.com"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
