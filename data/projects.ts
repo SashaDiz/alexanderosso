@@ -115,6 +115,23 @@ export const buildingNow: BuildingProject[] = [
     accentColor: "#6366F1",
     thumbnail: "/projects/posteahora.png",
   },
+  {
+    slug: "ailaunch",
+    name: "AI Launch Space",
+    tagline:
+      "Curated directory of AI tools built by indie hackers and founders.",
+    description:
+      "Discovery platform connecting indie AI builders with early adopters. 190+ tools indexed across categories, with submission flow and ranking.",
+    url: "https://ailaunch.space/",
+    status: "Live",
+    stage: "Live",
+    stageNote: "Live · 190+ AI tools indexed",
+    launched: "2025 Q4",
+    stack: ["Next.js", "Directory", "AI"],
+    gradient: "from-[#0A0A0A] to-[#1E3A8A]",
+    accentColor: "#60A5FA",
+    thumbnail: "/projects/ailaunch.png",
+  },
 ];
 
 export type PastProject = {
