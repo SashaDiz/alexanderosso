@@ -9,25 +9,25 @@ export const metadata = {
 export default function TermsPage() {
   return (
     <>
-      <main className="flex-1 w-full max-w-3xl px-6 py-20">
+      <main className="flex-1 w-full max-w-container px-5 py-12"><div className="glass-strong rounded-card p-6 md:p-8">
         <Link
           href="/mulu"
-          className="text-sm text-muted hover:text-foreground transition-colors mb-8 inline-block"
+          className="text-[0.6875rem] text-muted hover:text-foreground transition-colors mb-8 inline-block"
         >
           &larr; Mulu
         </Link>
 
-        <h1 className="font-display font-bold text-3xl mb-2">
+        <h1 className="font-display font-medium text-xl tracking-tight mb-2">
           Terms of Service
         </h1>
-        <p className="text-sm text-muted mb-10">
+        <p className="text-sm text-muted mb-6">
           Last Updated: March 22, 2026
         </p>
 
-        <div className="space-y-8 text-base text-muted leading-relaxed">
+        <div className="space-y-6 text-xs text-muted leading-relaxed">
           {/* 1 */}
           <section>
-            <h2 className="text-accent font-display font-bold text-lg mb-4">
+            <h2 className="text-foreground font-display font-medium text-sm mb-4">
               1. Acceptance of Terms
             </h2>
             <p>
@@ -45,7 +45,7 @@ export default function TermsPage() {
 
           {/* 2 */}
           <section>
-            <h2 className="text-accent font-display font-bold text-lg mb-4">
+            <h2 className="text-foreground font-display font-medium text-sm mb-4">
               2. Description of Service
             </h2>
             <p className="mb-3">
@@ -97,7 +97,7 @@ export default function TermsPage() {
 
           {/* 3 */}
           <section>
-            <h2 className="text-accent font-display font-bold text-lg mb-4">
+            <h2 className="text-foreground font-display font-medium text-sm mb-4">
               3. Eligibility
             </h2>
             <p>
@@ -115,7 +115,7 @@ export default function TermsPage() {
 
           {/* 4 */}
           <section>
-            <h2 className="text-accent font-display font-bold text-lg mb-4">
+            <h2 className="text-foreground font-display font-medium text-sm mb-4">
               4. User Account &amp; Data
             </h2>
             <ul className="list-disc pl-5 space-y-2">
@@ -154,11 +154,11 @@ export default function TermsPage() {
 
           {/* 5 */}
           <section>
-            <h2 className="text-accent font-display font-bold text-lg mb-4">
+            <h2 className="text-foreground font-display font-medium text-sm mb-4">
               5. License &amp; Usage Restrictions
             </h2>
 
-            <h3 className="text-foreground font-semibold text-base mb-2">
+            <h3 className="text-foreground font-medium text-xs mb-2">
               5.1 License Grant
             </h3>
             <p>
@@ -167,7 +167,7 @@ export default function TermsPage() {
               devices you own or control, subject to these Terms.
             </p>
 
-            <h3 className="text-foreground font-semibold text-base mb-2 mt-6">
+            <h3 className="text-foreground font-medium text-xs mb-2 mt-6">
               5.2 Restrictions
             </h3>
             <p className="mb-3">
@@ -215,11 +215,11 @@ export default function TermsPage() {
 
           {/* 6 */}
           <section>
-            <h2 className="text-accent font-display font-bold text-lg mb-4">
+            <h2 className="text-foreground font-display font-medium text-sm mb-4">
               6. Subscriptions &amp; Payments
             </h2>
 
-            <h3 className="text-foreground font-semibold text-base mb-2">
+            <h3 className="text-foreground font-medium text-xs mb-2">
               6.1 Free &amp; Premium Tiers
             </h3>
             <p>
@@ -228,7 +228,7 @@ export default function TermsPage() {
               analytics, are available exclusively to premium subscribers.
             </p>
 
-            <h3 className="text-foreground font-semibold text-base mb-2 mt-6">
+            <h3 className="text-foreground font-medium text-xs mb-2 mt-6">
               6.2 Billing
             </h3>
             <ul className="list-disc pl-5 space-y-1">
@@ -257,7 +257,7 @@ export default function TermsPage() {
               </li>
             </ul>
 
-            <h3 className="text-foreground font-semibold text-base mb-2 mt-6">
+            <h3 className="text-foreground font-medium text-xs mb-2 mt-6">
               6.3 Price Changes
             </h3>
             <ul className="list-disc pl-5 space-y-1">
@@ -275,7 +275,7 @@ export default function TermsPage() {
               </li>
             </ul>
 
-            <h3 className="text-foreground font-semibold text-base mb-2 mt-6">
+            <h3 className="text-foreground font-medium text-xs mb-2 mt-6">
               6.4 Refunds
             </h3>
             <p>
@@ -283,7 +283,7 @@ export default function TermsPage() {
               Store refund policy. We do not process refunds directly.
             </p>
 
-            <h3 className="text-foreground font-semibold text-base mb-2 mt-6">
+            <h3 className="text-foreground font-medium text-xs mb-2 mt-6">
               6.5 Free Trial
             </h3>
             <p>
@@ -295,11 +295,11 @@ export default function TermsPage() {
 
           {/* 7 */}
           <section>
-            <h2 className="text-accent font-display font-bold text-lg mb-4">
+            <h2 className="text-foreground font-display font-medium text-sm mb-4">
               7. App Blocking &amp; Screen Time
             </h2>
 
-            <h3 className="text-foreground font-semibold text-base mb-2">
+            <h3 className="text-foreground font-medium text-xs mb-2">
               7.1 Functionality
             </h3>
             <p>
@@ -309,7 +309,7 @@ export default function TermsPage() {
               entirely optional.
             </p>
 
-            <h3 className="text-foreground font-semibold text-base mb-2 mt-6">
+            <h3 className="text-foreground font-medium text-xs mb-2 mt-6">
               7.2 User Control
             </h3>
             <p className="mb-3">
@@ -337,10 +337,10 @@ export default function TermsPage() {
               </li>
             </ul>
 
-            <h3 className="text-foreground font-semibold text-base mb-2 mt-6">
+            <h3 className="text-foreground font-medium text-xs mb-2 mt-6">
               7.3 Disclaimer
             </h3>
-            <p className="uppercase text-sm">
+            <p className="uppercase text-[0.6875rem]">
               The app blocking feature is provided as a self-improvement tool. We
               do not guarantee that it will prevent access to any particular app
               under all circumstances. The feature relies on Apple&apos;s Screen
@@ -350,11 +350,11 @@ export default function TermsPage() {
 
           {/* 8 */}
           <section>
-            <h2 className="text-accent font-display font-bold text-lg mb-4">
+            <h2 className="text-foreground font-display font-medium text-sm mb-4">
               8. AI-Generated Content
             </h2>
 
-            <h3 className="text-foreground font-semibold text-base mb-2">
+            <h3 className="text-foreground font-medium text-xs mb-2">
               8.1 Journal Prompts
             </h3>
             <p>
@@ -363,10 +363,10 @@ export default function TermsPage() {
               prompts are suggestions only.
             </p>
 
-            <h3 className="text-foreground font-semibold text-base mb-2 mt-6">
+            <h3 className="text-foreground font-medium text-xs mb-2 mt-6">
               8.2 Disclaimer
             </h3>
-            <p className="uppercase text-sm">
+            <p className="uppercase text-[0.6875rem]">
               AI-generated journal prompts are provided for inspirational and
               reflective purposes only. They do not constitute professional advice
               of any kind, including but not limited to mental health, medical,
@@ -397,11 +397,11 @@ export default function TermsPage() {
 
           {/* 9 */}
           <section>
-            <h2 className="text-accent font-display font-bold text-lg mb-4">
+            <h2 className="text-foreground font-display font-medium text-sm mb-4">
               9. Intellectual Property
             </h2>
 
-            <h3 className="text-foreground font-semibold text-base mb-2">
+            <h3 className="text-foreground font-medium text-xs mb-2">
               9.1 App Ownership
             </h3>
             <p>
@@ -411,7 +411,7 @@ export default function TermsPage() {
               trademark, and other intellectual property laws.
             </p>
 
-            <h3 className="text-foreground font-semibold text-base mb-2 mt-6">
+            <h3 className="text-foreground font-medium text-xs mb-2 mt-6">
               9.2 User Content
             </h3>
             <p>
@@ -422,7 +422,7 @@ export default function TermsPage() {
               ideas.
             </p>
 
-            <h3 className="text-foreground font-semibold text-base mb-2 mt-6">
+            <h3 className="text-foreground font-medium text-xs mb-2 mt-6">
               9.3 Feedback
             </h3>
             <p>
@@ -435,18 +435,18 @@ export default function TermsPage() {
 
           {/* 10 */}
           <section>
-            <h2 className="text-accent font-display font-bold text-lg mb-4">
+            <h2 className="text-foreground font-display font-medium text-sm mb-4">
               10. Disclaimer of Warranties
             </h2>
-            <p className="uppercase text-sm mb-3">
+            <p className="uppercase text-[0.6875rem] mb-3">
               The App is provided on an &quot;as is&quot; and &quot;as
               available&quot; basis, without warranties of any kind, either
               express or implied, including but not limited to implied warranties
               of merchantability, fitness for a particular purpose, or
               non-infringement.
             </p>
-            <p className="uppercase text-sm">We do not warrant that:</p>
-            <ul className="list-disc pl-5 space-y-1 mt-2 uppercase text-sm">
+            <p className="uppercase text-[0.6875rem]">We do not warrant that:</p>
+            <ul className="list-disc pl-5 space-y-1 mt-2 uppercase text-[0.6875rem]">
               <li>
                 The App will be uninterrupted, secure, or error-free
               </li>
@@ -468,14 +468,14 @@ export default function TermsPage() {
 
           {/* 11 */}
           <section>
-            <h2 className="text-accent font-display font-bold text-lg mb-4">
+            <h2 className="text-foreground font-display font-medium text-sm mb-4">
               11. Limitation of Liability
             </h2>
-            <p className="uppercase text-sm mb-3">
+            <p className="uppercase text-[0.6875rem] mb-3">
               To the maximum extent permitted by applicable law, in no event
               shall Aleksandr Borisov be liable for:
             </p>
-            <ul className="list-disc pl-5 space-y-1 uppercase text-sm">
+            <ul className="list-disc pl-5 space-y-1 uppercase text-[0.6875rem]">
               <li>
                 Any indirect, incidental, special, consequential, or punitive
                 damages
@@ -492,7 +492,7 @@ export default function TermsPage() {
                 PostHog, Anthropic, Apple CloudKit)
               </li>
             </ul>
-            <p className="uppercase text-sm mt-3">
+            <p className="uppercase text-[0.6875rem] mt-3">
               Our maximum aggregate liability shall not exceed the greater of (a)
               &euro;100 or (b) the total amounts you have paid to us in the 12
               months preceding the claim.
@@ -506,7 +506,7 @@ export default function TermsPage() {
 
           {/* 12 */}
           <section>
-            <h2 className="text-accent font-display font-bold text-lg mb-4">
+            <h2 className="text-foreground font-display font-medium text-sm mb-4">
               12. Third-Party Services
             </h2>
             <p>
@@ -520,11 +520,11 @@ export default function TermsPage() {
 
           {/* 13 */}
           <section>
-            <h2 className="text-accent font-display font-bold text-lg mb-4">
+            <h2 className="text-foreground font-display font-medium text-sm mb-4">
               13. Modifications to the App &amp; Terms
             </h2>
 
-            <h3 className="text-foreground font-semibold text-base mb-2">
+            <h3 className="text-foreground font-medium text-xs mb-2">
               13.1 App Changes
             </h3>
             <p>
@@ -533,7 +533,7 @@ export default function TermsPage() {
               reasonable efforts to notify users of significant changes.
             </p>
 
-            <h3 className="text-foreground font-semibold text-base mb-2 mt-6">
+            <h3 className="text-foreground font-medium text-xs mb-2 mt-6">
               13.2 Terms Changes
             </h3>
             <p className="mb-3">
@@ -559,11 +559,11 @@ export default function TermsPage() {
 
           {/* 14 */}
           <section>
-            <h2 className="text-accent font-display font-bold text-lg mb-4">
+            <h2 className="text-foreground font-display font-medium text-sm mb-4">
               14. Termination
             </h2>
 
-            <h3 className="text-foreground font-semibold text-base mb-2">
+            <h3 className="text-foreground font-medium text-xs mb-2">
               14.1 By You
             </h3>
             <p>
@@ -572,7 +572,7 @@ export default function TermsPage() {
               separately through Apple&apos;s subscription management.
             </p>
 
-            <h3 className="text-foreground font-semibold text-base mb-2 mt-6">
+            <h3 className="text-foreground font-medium text-xs mb-2 mt-6">
               14.2 By Us
             </h3>
             <p>
@@ -581,7 +581,7 @@ export default function TermsPage() {
               your license to use the App is revoked.
             </p>
 
-            <h3 className="text-foreground font-semibold text-base mb-2 mt-6">
+            <h3 className="text-foreground font-medium text-xs mb-2 mt-6">
               14.3 Survival
             </h3>
             <p>
@@ -592,7 +592,7 @@ export default function TermsPage() {
 
           {/* 15 */}
           <section>
-            <h2 className="text-accent font-display font-bold text-lg mb-4">
+            <h2 className="text-foreground font-display font-medium text-sm mb-4">
               15. Governing Law &amp; Disputes
             </h2>
             <p>
@@ -611,7 +611,7 @@ export default function TermsPage() {
 
           {/* 16 */}
           <section>
-            <h2 className="text-accent font-display font-bold text-lg mb-4">
+            <h2 className="text-foreground font-display font-medium text-sm mb-4">
               16. Apple App Store Terms
             </h2>
             <p className="mb-3">
@@ -646,7 +646,7 @@ export default function TermsPage() {
 
           {/* 17 */}
           <section>
-            <h2 className="text-accent font-display font-bold text-lg mb-4">
+            <h2 className="text-foreground font-display font-medium text-sm mb-4">
               17. Accessibility
             </h2>
             <p className="mb-3">
@@ -670,7 +670,7 @@ export default function TermsPage() {
 
           {/* 18 */}
           <section>
-            <h2 className="text-accent font-display font-bold text-lg mb-4">
+            <h2 className="text-foreground font-display font-medium text-sm mb-4">
               18. Severability
             </h2>
             <p>
@@ -683,7 +683,7 @@ export default function TermsPage() {
 
           {/* 19 */}
           <section>
-            <h2 className="text-accent font-display font-bold text-lg mb-4">
+            <h2 className="text-foreground font-display font-medium text-sm mb-4">
               19. Entire Agreement
             </h2>
             <p>
@@ -701,7 +701,7 @@ export default function TermsPage() {
 
           {/* 20 */}
           <section>
-            <h2 className="text-accent font-display font-bold text-lg mb-4">
+            <h2 className="text-foreground font-display font-medium text-sm mb-4">
               20. Contact Us
             </h2>
             <p>
@@ -731,7 +731,7 @@ export default function TermsPage() {
             </ul>
           </section>
         </div>
-      </main>
+      </div></main>
     </>
   );
 }

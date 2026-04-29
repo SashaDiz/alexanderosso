@@ -1,115 +1,86 @@
 "use client";
 
+import { useContact } from "./ContactProvider";
+
 const services = [
   {
-    icon: (
-      <svg viewBox="0 0 32 32" className="w-8 h-8" fill="none" stroke="#E85D2D" strokeWidth="2" strokeLinecap="round">
-        <path d="M16 4 L18 12 L26 12 L20 17 L22 25 L16 20 L10 25 L12 17 L6 12 L14 12 Z" />
-      </svg>
-    ),
-    title: "MVP Design",
-    desc: "Ship your SaaS idea fast. Complete MVP — landing page, core product UI, onboarding flow — ready for development.",
+    title: "MVP Build",
+    desc: "Full MVP shipped end-to-end — landing, core product, onboarding. Designed and vibe-coded to a live URL, not just Figma.",
     price: "from $3,000",
-    doodle: (
-      <svg className="absolute top-4 right-4 w-6 h-6 opacity-20" viewBox="0 0 24 24" fill="none" stroke="#E85D2D" strokeWidth="1.5" strokeLinecap="round">
-        <path d="M12 2 L14 8 L20 8 L15 12 L17 18 L12 14 L7 18 L9 12 L4 8 L10 8 Z" />
-      </svg>
-    ),
   },
   {
-    icon: (
-      <svg viewBox="0 0 32 32" className="w-8 h-8" fill="none" stroke="#E85D2D" strokeWidth="2" strokeLinecap="round">
-        <rect x="4" y="6" width="24" height="18" rx="3" />
-        <line x1="4" y1="12" x2="28" y2="12" />
-        <rect x="8" y="16" width="8" height="3" rx="1" />
-      </svg>
-    ),
     title: "Website & Landing",
-    desc: "High-converting marketing sites for SaaS. Copy direction, responsive design, CRO best practices included.",
+    desc: "High-converting SaaS sites — copy, design, code. Deployed to your domain with CRO baked in.",
     price: "from $2,000",
-    doodle: (
-      <svg className="absolute top-4 right-4 w-8 h-8 opacity-20" viewBox="0 0 32 32" fill="none" stroke="#E85D2D" strokeWidth="1.5" strokeLinecap="round" strokeDasharray="3 3">
-        <path d="M8 24 Q16 8 24 24" />
-      </svg>
-    ),
   },
   {
-    icon: (
-      <svg viewBox="0 0 32 32" className="w-8 h-8" fill="none" stroke="#E85D2D" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <polygon points="16,4 28,12 28,24 16,28 4,24 4,12" />
-        <line x1="16" y1="4" x2="16" y2="28" />
-        <line x1="4" y1="12" x2="28" y2="12" />
-      </svg>
-    ),
     title: "Directory / AI App",
-    desc: "Custom directories, AI tools, and niche SaaS. Full design + optional front-end build with Tailwind.",
+    desc: "Custom directories, AI tools, niche SaaS — design + Next.js front-end + integrations (Stripe, Supabase, OAuth).",
     price: "from $4,000",
-    doodle: (
-      <svg className="absolute bottom-4 right-4 w-6 h-6 opacity-20" viewBox="0 0 24 24" fill="none" stroke="#E85D2D" strokeWidth="1.5" strokeLinecap="round">
-        <circle cx="12" cy="12" r="3" />
-        <path d="M12 2 v4 M12 18 v4 M2 12 h4 M18 12 h4" strokeDasharray="2 2" />
-      </svg>
-    ),
   },
 ];
 
 export default function Services() {
+  const contact = useContact();
   return (
-    <section id="services" className="py-20 md:py-32">
-      <div className="max-w-container mx-auto px-6">
-        {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-14 sr">
-          <h2 className="font-display font-bold text-3xl md:text-5xl text-foreground">
-            What I <span className="text-muted">can build</span> for you.
-          </h2>
-          <p className="text-sm text-muted max-w-md md:text-right leading-relaxed">
-            End-to-end design for SaaS products — from first wireframe to
-            production-ready UI.
+    <section id="services" className="">
+      <div className="max-w-container mx-auto px-5">
+        <div className="glass-strong rounded-card p-6 md:p-8 sr">
+          <div className="flex items-center justify-between mb-1.5">
+            <h2 className="font-display font-medium text-base text-foreground">
+              Working with founders
+            </h2>
+            <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full border border-accent/25 bg-accent/10 text-accent text-[0.625rem] font-mono uppercase tracking-wider">
+              <span className="relative flex h-1.5 w-1.5">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-60" />
+                <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-accent" />
+              </span>
+              2 slots open
+            </span>
+          </div>
+
+          <p className="text-xs text-muted leading-relaxed mb-5 max-w-[60ch]">
+            I take on a small number of client projects between my own —
+            end-to-end builds, not just design.
           </p>
-        </div>
 
-        {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-          {services.map((service) => (
-            <div
-              key={service.title}
-              className="sr group relative bg-bg-card border border-border rounded-card p-7 md:p-8 hover:-translate-y-1 transition-all duration-300 overflow-hidden"
-              data-cursor-hover
-            >
-              {/* Accent top line */}
-              <div className="absolute top-0 left-0 right-0 h-[2px] bg-accent origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
-
-              {service.doodle}
-
-              <div className="mb-5">{service.icon}</div>
-
-              <h3 className="font-display font-bold text-xl text-foreground mb-3">
-                {service.title}
-              </h3>
-
-              <p className="text-sm text-muted leading-relaxed mb-6">
-                {service.desc}
-              </p>
-
-              <div className="flex items-center justify-between">
-                <span className="font-mono text-sm text-accent">{service.price}</span>
-                <div className="w-10 h-10 rounded-full border border-border flex items-center justify-center group-hover:border-accent group-hover:bg-accent/10 transition-all duration-300">
-                  <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 16 16"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    className="text-muted group-hover:text-accent group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300"
-                  >
-                    <path d="M4 12 L12 4 M12 4 L5 4 M12 4 L12 11" />
-                  </svg>
+          <div className="flex flex-col">
+            {services.map((service, i) => (
+              <button
+                key={service.title}
+                type="button"
+                onClick={() => contact.open(`Inquiry: ${service.title}`)}
+                className={`group flex items-center gap-4 py-3.5 text-left ${
+                  i < services.length - 1 ? "border-b border-border" : ""
+                } hover:bg-bg-card-hover/50 transition-colors -mx-4 px-4 rounded-lg`}
+                data-cursor-cta
+              >
+                <div className="flex-1 min-w-0">
+                  <h3 className="font-display font-medium text-sm text-foreground group-hover:text-accent transition-colors mb-0.5">
+                    {service.title}
+                  </h3>
+                  <p className="text-[0.6875rem] text-muted leading-snug">
+                    {service.desc}
+                  </p>
                 </div>
-              </div>
-            </div>
-          ))}
+                <span className="font-mono text-[0.6875rem] text-accent shrink-0">
+                  {service.price}
+                </span>
+                <svg aria-hidden="true"
+                  width="11"
+                  height="11"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  className="text-muted group-hover:text-accent group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300 shrink-0"
+                >
+                  <path d="M3 11 L11 3 M4 3 L11 3 L11 10" />
+                </svg>
+              </button>
+            ))}
+          </div>
         </div>
       </div>
     </section>

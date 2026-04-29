@@ -9,20 +9,20 @@ export const metadata = {
 export default function PrivacyPage() {
   return (
     <>
-      <main className="flex-1 w-full max-w-3xl px-6 py-20">
+      <main className="flex-1 w-full max-w-container px-5 py-12"><div className="glass-strong rounded-card p-6 md:p-8">
         <Link
           href="/mulu"
-          className="text-sm text-muted hover:text-foreground transition-colors mb-8 inline-block"
+          className="text-[0.6875rem] text-muted hover:text-foreground transition-colors mb-8 inline-block"
         >
           &larr; Mulu
         </Link>
 
-        <h1 className="font-display font-bold text-3xl mb-2">
+        <h1 className="font-display font-medium text-xl tracking-tight mb-2">
           Privacy Policy
         </h1>
-        <p className="text-sm text-muted mb-10">Last Updated: March 22, 2026</p>
+        <p className="text-sm text-muted mb-6">Last Updated: March 22, 2026</p>
 
-        <div className="space-y-8 text-base text-muted leading-relaxed">
+        <div className="space-y-6 text-xs text-muted leading-relaxed">
           {/* Introduction */}
           <section>
             <p>
@@ -40,11 +40,11 @@ export default function PrivacyPage() {
 
           {/* 1. Information We Collect */}
           <section>
-            <h2 className="text-accent font-display font-bold text-lg mb-4">
+            <h2 className="text-foreground font-display font-medium text-sm mb-4">
               1. Information We Collect
             </h2>
 
-            <h3 className="text-foreground font-semibold text-base mb-2">
+            <h3 className="text-foreground font-medium text-xs mb-2">
               1.1 Information You Provide
             </h3>
             <p className="mb-3">
@@ -85,7 +85,7 @@ export default function PrivacyPage() {
               </li>
             </ul>
 
-            <h3 className="text-foreground font-semibold text-base mb-2 mt-6">
+            <h3 className="text-foreground font-medium text-xs mb-2 mt-6">
               1.2 Information Collected Automatically
             </h3>
             <p className="mb-3">
@@ -122,7 +122,7 @@ export default function PrivacyPage() {
               </li>
             </ul>
 
-            <h3 className="text-foreground font-semibold text-base mb-2 mt-6">
+            <h3 className="text-foreground font-medium text-xs mb-2 mt-6">
               1.3 Information Stored Locally on Your Device
             </h3>
             <p className="mb-3">
@@ -149,7 +149,7 @@ export default function PrivacyPage() {
 
           {/* 2. How We Use Your Information */}
           <section>
-            <h2 className="text-accent font-display font-bold text-lg mb-4">
+            <h2 className="text-foreground font-display font-medium text-sm mb-4">
               2. How We Use Your Information
             </h2>
             <ol className="list-decimal pl-5 space-y-2">
@@ -194,7 +194,7 @@ export default function PrivacyPage() {
 
           {/* 3. Third-Party Services */}
           <section>
-            <h2 className="text-accent font-display font-bold text-lg mb-4">
+            <h2 className="text-foreground font-display font-medium text-sm mb-4">
               3. Third-Party Services
             </h2>
             <p className="mb-4">
@@ -202,7 +202,7 @@ export default function PrivacyPage() {
               their own privacy policies:
             </p>
             <div className="overflow-x-auto">
-              <table className="w-full text-left text-sm border-collapse">
+              <table className="w-full text-left text-[0.6875rem] border-collapse">
                 <thead>
                   <tr className="border-b border-border">
                     <th className="text-foreground font-semibold py-2 pr-4">
@@ -275,7 +275,7 @@ export default function PrivacyPage() {
 
           {/* 4. Data Retention */}
           <section>
-            <h2 className="text-accent font-display font-bold text-lg mb-4">
+            <h2 className="text-foreground font-display font-medium text-sm mb-4">
               4. Data Retention
             </h2>
             <ul className="list-disc pl-5 space-y-2">
@@ -320,7 +320,7 @@ export default function PrivacyPage() {
 
           {/* 5. Data Security */}
           <section>
-            <h2 className="text-accent font-display font-bold text-lg mb-4">
+            <h2 className="text-foreground font-display font-medium text-sm mb-4">
               5. Data Security
             </h2>
             <p className="mb-3">
@@ -368,7 +368,7 @@ export default function PrivacyPage() {
 
           {/* 6. Your Rights */}
           <section>
-            <h2 className="text-accent font-display font-bold text-lg mb-4">
+            <h2 className="text-foreground font-display font-medium text-sm mb-4">
               6. Your Rights
             </h2>
             <p className="mb-3">
@@ -411,7 +411,7 @@ export default function PrivacyPage() {
               </li>
             </ul>
 
-            <h3 className="text-foreground font-semibold text-base mb-2 mt-6">
+            <h3 className="text-foreground font-medium text-xs mb-2 mt-6">
               For EU/EEA Residents (GDPR)
             </h3>
             <p className="mb-3">
@@ -466,7 +466,7 @@ export default function PrivacyPage() {
 
           {/* 7. Children's Privacy */}
           <section>
-            <h2 className="text-accent font-display font-bold text-lg mb-4">
+            <h2 className="text-foreground font-display font-medium text-sm mb-4">
               7. Children&apos;s Privacy
             </h2>
             <p>
@@ -484,7 +484,7 @@ export default function PrivacyPage() {
 
           {/* 8. Push Notifications */}
           <section>
-            <h2 className="text-accent font-display font-bold text-lg mb-4">
+            <h2 className="text-foreground font-display font-medium text-sm mb-4">
               8. Push Notifications
             </h2>
             <p className="mb-3">
@@ -508,7 +508,7 @@ export default function PrivacyPage() {
 
           {/* 9. Voice Recording & Speech Recognition */}
           <section>
-            <h2 className="text-accent font-display font-bold text-lg mb-4">
+            <h2 className="text-foreground font-display font-medium text-sm mb-4">
               9. Voice Recording &amp; Speech Recognition
             </h2>
             <p className="mb-3">
@@ -537,7 +537,7 @@ export default function PrivacyPage() {
 
           {/* 10. App Blocking & Screen Time */}
           <section>
-            <h2 className="text-accent font-display font-bold text-lg mb-4">
+            <h2 className="text-foreground font-display font-medium text-sm mb-4">
               10. App Blocking &amp; Screen Time
             </h2>
             <p className="mb-3">
@@ -565,7 +565,7 @@ export default function PrivacyPage() {
 
           {/* 11. Cookies & Tracking */}
           <section>
-            <h2 className="text-accent font-display font-bold text-lg mb-4">
+            <h2 className="text-foreground font-display font-medium text-sm mb-4">
               11. Cookies &amp; Tracking
             </h2>
             <ul className="list-disc pl-5 space-y-1">
@@ -594,7 +594,7 @@ export default function PrivacyPage() {
 
           {/* 12. Changes to This Privacy Policy */}
           <section>
-            <h2 className="text-accent font-display font-bold text-lg mb-4">
+            <h2 className="text-foreground font-display font-medium text-sm mb-4">
               12. Changes to This Privacy Policy
             </h2>
             <p className="mb-3">
@@ -617,7 +617,7 @@ export default function PrivacyPage() {
 
           {/* 13. Contact Us */}
           <section>
-            <h2 className="text-accent font-display font-bold text-lg mb-4">
+            <h2 className="text-foreground font-display font-medium text-sm mb-4">
               13. Contact Us
             </h2>
             <p>
@@ -649,7 +649,7 @@ export default function PrivacyPage() {
             </p>
           </section>
         </div>
-      </main>
+      </div></main>
     </>
   );
 }

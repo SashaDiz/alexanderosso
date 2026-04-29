@@ -1,119 +1,104 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { Fragment, useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const timeline = [
-  {
-    role: "Product Designer",
-    company: "MarsX",
-    period: "2023–2026",
-    desc: "SaaS & AI startup studio",
-    active: true,
-  },
-  {
-    role: "UI/UX Designer",
-    company: "Instadapp",
-    period: "2021–2023",
-    desc: "DeFi, $10M Series A",
-    active: false,
-  },
-  {
-    role: "UI Designer",
-    company: "LAD Network",
-    period: "2020–2021",
-    desc: "Browser extensions",
-    active: false,
-  },
-  {
-    role: "UI/UX Designer",
-    company: "Light-tech.io",
-    period: "2018–2020",
-    desc: "WIX ecosystem",
-    active: false,
-  },
+  { role: "Solo Founder", company: "Independent", period: "2025 — now", desc: "5 SaaS products, building in public", active: true },
+  { role: "Product Designer", company: "MarsX", period: "2023 — 2026", desc: "SaaS & AI startup studio", active: false },
+  { role: "UI/UX Designer", company: "Instadapp", period: "2021 — 2023", desc: "DeFi, $10M Series A", active: false },
+  { role: "UI Designer", company: "LAD Network", period: "2020 — 2021", desc: "Browser extensions", active: false },
 ];
 
 const skills = [
-  { name: "Figma", highlight: true },
-  { name: "UI/UX", highlight: false },
-  { name: "Prototyping", highlight: false },
-  { name: "MVP Design", highlight: true },
-  { name: "CRO", highlight: false },
-  { name: "Design Systems", highlight: false },
-  { name: "HTML/CSS", highlight: false },
-  { name: "SaaS", highlight: true },
-  { name: "SEO", highlight: false },
-  { name: "Analytics", highlight: false },
-  { name: "A/B Testing", highlight: false },
+  // Identity / process
+  { name: "Solo Founding", highlight: true },
+  { name: "Vibe Coding", highlight: true },
   { name: "Claude Code", highlight: true },
+  { name: "Cursor", highlight: false },
+  { name: "Figma", highlight: false },
+  { name: "MVP Design", highlight: false },
+
+  // Web stack
+  { name: "Next.js", highlight: false },
+  { name: "React", highlight: false },
+  { name: "TypeScript", highlight: false },
+  { name: "Tailwind", highlight: false },
+  { name: "Shadcn/ui", highlight: false },
+  { name: "Zod", highlight: false },
+
+  // iOS
+  { name: "iOS / SwiftUI", highlight: false },
+  { name: "App Store Launch", highlight: false },
+
+  // Backend / infra / data
+  { name: "Supabase", highlight: false },
+  { name: "PostgreSQL", highlight: false },
+  { name: "Vercel", highlight: false },
+  { name: "Resend", highlight: false },
+
+  // Payments
+  { name: "Stripe", highlight: false },
+  { name: "RevenueCat", highlight: false },
+
+  // API integrations
+  { name: "Meta API", highlight: false },
+  { name: "X API", highlight: false },
+  { name: "TikTok API", highlight: false },
+  { name: "LinkedIn API", highlight: false },
+  { name: "Google API", highlight: false },
+  { name: "OAuth", highlight: false },
+
+  // AI
+  { name: "Anthropic API", highlight: false },
+  { name: "OpenAI API", highlight: false },
+
+  // Growth
+  { name: "SEO", highlight: false },
+  { name: "CRO", highlight: false },
+  { name: "A/B Testing", highlight: false },
+  { name: "PostHog", highlight: false },
   { name: "PH Launch", highlight: false },
 ];
 
 const stats = [
-  { value: "10", suffix: "+", label: "Years in design" },
-  { value: "30", suffix: "%", label: "CVR increase avg." },
-  { value: "6", suffix: "fig", label: "MRR products scaled" },
+  { value: "5", suffix: "", label: "Live products" },
+  { value: "10", suffix: "+", label: "Years designing" },
+  { value: "30", suffix: "%", label: "Avg CVR lift" },
+  { value: "6", suffix: "fig", label: "MRR scaled" },
 ];
 
 const steps = [
-  { num: "01", title: "Discovery", desc: "Understand goals & users" },
-  { num: "02", title: "Research", desc: "Audit, benchmark, analyze" },
-  { num: "03", title: "Design", desc: "Wireframes to hi-fi UI" },
-  { num: "04", title: "Build", desc: "Handoff or code it myself" },
-  { num: "05", title: "Optimize", desc: "Test, iterate, improve" },
+  { num: "01", title: "Idea" },
+  { num: "02", title: "Design" },
+  { num: "03", title: "Vibe-code" },
+  { num: "04", title: "Ship" },
+  { num: "05", title: "Iterate" },
 ];
 
 export default function BentoGrid() {
   const sectionRef = useRef<HTMLElement>(null);
   const statsRef = useRef<HTMLDivElement>(null);
-  const tagsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
     const ctx = gsap.context(() => {
-      // Counter animation
       if (statsRef.current) {
         statsRef.current.querySelectorAll(".stat-num").forEach((el) => {
           const target = parseInt(el.getAttribute("data-target") || "0");
           const obj = { val: 0 };
-
           gsap.to(obj, {
             val: target,
-            duration: 2,
+            duration: 1.6,
             ease: "power2.out",
-            scrollTrigger: {
-              trigger: el,
-              start: "top 88%",
-              once: true,
-            },
+            scrollTrigger: { trigger: el, start: "top 90%", once: true },
             onUpdate: () => {
               (el as HTMLElement).textContent = Math.round(obj.val).toString();
             },
           });
         });
-      }
-
-      // Tags stagger
-      if (tagsRef.current) {
-        gsap.fromTo(
-          tagsRef.current.querySelectorAll(".skill-tag"),
-          { opacity: 0, scale: 0.7 },
-          {
-            opacity: 1,
-            scale: 1,
-            duration: 0.4,
-            stagger: 0.04,
-            ease: "back.out(2)",
-            scrollTrigger: {
-              trigger: tagsRef.current,
-              start: "top 88%",
-              once: true,
-            },
-          }
-        );
       }
     }, sectionRef);
 
@@ -121,36 +106,55 @@ export default function BentoGrid() {
   }, []);
 
   return (
-    <section ref={sectionRef} id="experience" className="py-20 md:py-32">
-      <div className="max-w-container mx-auto px-6">
-        {/* Bento grid */}
-        <div className="grid grid-cols-12 gap-4 md:gap-5">
-          {/* Card A — Timeline */}
-          <div className="col-span-12 md:col-span-5 bg-bg-card border border-border rounded-card p-6 md:p-8 sr">
-            <span className="font-mono text-xs uppercase tracking-widest text-muted mb-6 block">
+    <section ref={sectionRef} id="experience">
+      <div className="max-w-container mx-auto px-5 flex flex-col gap-3">
+        {/* Numbers strip */}
+        <div ref={statsRef} className="glass-strong rounded-card p-5 md:p-6 grid grid-cols-2 sm:grid-cols-4 gap-4 sr">
+          {stats.map((stat) => (
+            <div key={stat.label}>
+              <div className="flex items-baseline gap-0.5">
+                <span
+                  className="stat-num font-display font-medium text-2xl text-foreground"
+                  data-target={stat.value}
+                >
+                  0
+                </span>
+                <span className="font-display font-medium text-base text-accent">
+                  {stat.suffix}
+                </span>
+              </div>
+              <p className="text-[0.6875rem] text-muted mt-1">{stat.label}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* Experience + Location two-up */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <div className="sm:col-span-2 glass-strong rounded-card p-5 md:p-6 sr">
+            <span className="font-mono text-[0.625rem] uppercase tracking-wider text-muted mb-4 block">
               Experience
             </span>
-            <div className="space-y-6">
+            <div className="space-y-3">
               {timeline.map((item, i) => (
-                <div key={i} className="flex gap-4">
-                  <div className="flex flex-col items-center">
+                <div key={i} className="flex gap-3">
+                  <div className="flex flex-col items-center pt-1">
                     <div
-                      className={`w-3 h-3 rounded-full border-2 ${
+                      className={`w-2 h-2 rounded-full border ${
                         item.active
                           ? "bg-accent border-accent"
-                          : "bg-transparent border-border"
+                          : "bg-bg border-border"
                       }`}
                     />
                     {i < timeline.length - 1 && (
-                      <div className="w-px flex-1 bg-border mt-2" />
+                      <div className="w-px flex-1 bg-border mt-1" />
                     )}
                   </div>
                   <div className="pb-2">
-                    <h4 className="font-display font-bold text-sm text-foreground">
+                    <h4 className="font-display font-medium text-xs text-foreground">
                       {item.role}{" "}
                       <span className="text-muted font-normal">— {item.company}</span>
                     </h4>
-                    <p className="text-xs text-muted mt-0.5">
+                    <p className="text-[0.6875rem] text-muted mt-0.5">
                       {item.period} · {item.desc}
                     </p>
                   </div>
@@ -159,119 +163,119 @@ export default function BentoGrid() {
             </div>
           </div>
 
-          {/* Card B — Skills */}
-          <div className="col-span-12 md:col-span-4 bg-bg-card border border-border rounded-card p-6 md:p-8 sr">
-            <span className="font-mono text-xs uppercase tracking-widest text-muted mb-6 block">
-              Skills & Tools
-            </span>
-            <div ref={tagsRef} className="flex flex-wrap gap-2">
-              {skills.map((skill) => (
-                <span
-                  key={skill.name}
-                  className={`skill-tag px-3 py-1.5 rounded-full text-xs font-medium border transition-colors ${
-                    skill.highlight
-                      ? "bg-accent/10 border-accent/30 text-accent"
-                      : "bg-bg border-border text-muted"
-                  }`}
-                >
-                  {skill.name}
-                </span>
-              ))}
-            </div>
-          </div>
+          <div className="glass-strong rounded-card p-5 md:p-6 relative overflow-hidden sr min-h-[180px]">
+            {/* Wireframe globe — peeking from bottom-right */}
+            <svg aria-hidden="true"
+              className="absolute -bottom-20 -right-20 sm:-bottom-28 sm:-right-28 w-[240px] h-[240px] sm:w-[300px] sm:h-[300px] text-foreground/25 pointer-events-none animate-spin-slow"
+              viewBox="0 0 200 200"
+              fill="none"
+              stroke="currentColor"
+              strokeLinecap="round"
+            >
+              {/* Outline */}
+              <circle cx="100" cy="100" r="92" strokeWidth="0.8" />
 
-          {/* Card C — Numbers */}
-          <div
-            ref={statsRef}
-            className="col-span-12 md:col-span-3 bg-bg-card border border-border rounded-card p-6 md:p-8 sr"
-          >
-            <span className="font-mono text-xs uppercase tracking-widest text-muted mb-6 block">
-              Numbers
-            </span>
-            <div className="space-y-6">
-              {stats.map((stat) => (
-                <div key={stat.label}>
-                  <div className="flex items-baseline gap-0.5">
-                    <span
-                      className="stat-num text-3xl md:text-4xl font-display font-bold text-foreground"
-                      data-target={stat.value}
-                    >
-                      0
-                    </span>
-                    <span className="text-xl md:text-2xl font-display font-bold text-accent">
-                      {stat.suffix}
-                    </span>
-                  </div>
-                  <p className="text-xs text-muted mt-1">{stat.label}</p>
-                </div>
-              ))}
-            </div>
-          </div>
+              {/* Meridians */}
+              <ellipse cx="100" cy="100" rx="92" ry="92" strokeWidth="0.5" />
+              <ellipse cx="100" cy="100" rx="68" ry="92" strokeWidth="0.5" />
+              <ellipse cx="100" cy="100" rx="38" ry="92" strokeWidth="0.5" />
+              <line x1="100" y1="8" x2="100" y2="192" strokeWidth="0.5" />
 
-          {/* Card D — Location */}
-          <div className="col-span-12 md:col-span-4 bg-bg-card border border-border rounded-card p-6 md:p-8 relative overflow-hidden sr">
-            {/* Grid pattern */}
-            <div
-              className="absolute inset-0 opacity-5"
-              style={{
-                backgroundImage:
-                  "linear-gradient(rgba(240,237,232,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(240,237,232,0.3) 1px, transparent 1px)",
-                backgroundSize: "40px 40px",
-              }}
-            />
+              {/* Parallels */}
+              <line x1="9" y1="100" x2="191" y2="100" strokeWidth="0.7" />
+              <ellipse cx="100" cy="100" rx="88" ry="44" strokeWidth="0.5" />
+              <ellipse cx="100" cy="100" rx="74" ry="70" strokeWidth="0.5" />
+
+              {/* Accent dotted equator overlay */}
+              <circle
+                cx="100"
+                cy="100"
+                r="92"
+                strokeDasharray="1 4"
+                strokeWidth="0.6"
+                stroke="rgb(var(--accent) / 0.5)"
+              />
+            </svg>
+
+            {/* Pulse dot — back to top-right */}
+            <div className="absolute top-4 right-4 flex h-2 w-2 z-10">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-60" />
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-accent" />
+            </div>
+
             <div className="relative">
-              {/* Ping dot */}
-              <div className="absolute top-0 right-0">
-                <span className="relative flex h-4 w-4">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
-                  <span className="relative inline-flex rounded-full h-4 w-4 bg-accent" />
-                </span>
-              </div>
-
-              {/* Map doodle */}
-              <svg
-                className="w-full h-24 mb-4 opacity-20"
-                viewBox="0 0 200 80"
-                fill="none"
-                stroke="#E85D2D"
-                strokeWidth="1"
-                strokeLinecap="round"
-                strokeDasharray="4 4"
-              >
-                <path d="M10 60 Q40 20 80 40 Q120 60 160 30 Q180 20 195 35" />
-                <path d="M20 70 Q60 30 100 50 Q140 70 180 40" />
-                <circle cx="120" cy="42" r="6" fill="#E85D2D" opacity="0.3" strokeDasharray="0" />
-              </svg>
-
-              <h3 className="font-display font-bold text-2xl md:text-3xl text-foreground">
-                MENDOZA
+              <span className="font-mono text-[0.625rem] uppercase tracking-wider text-muted mb-4 block">
+                Located in
+              </span>
+              <h3 className="font-display font-medium text-base text-foreground">
+                Buenos Aires
               </h3>
-              <p className="text-sm text-muted mt-1">ARGENTINA</p>
+              <p className="text-[0.6875rem] text-muted mt-0.5">Argentina · GMT-3</p>
             </div>
           </div>
+        </div>
 
-          {/* Card E — How I Work */}
-          <div className="col-span-12 md:col-span-8 bg-bg-card border border-border rounded-card p-6 md:p-8 sr">
-            <span className="font-mono text-xs uppercase tracking-widest text-muted mb-6 block">
-              How I Work
-            </span>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
-              {steps.map((step) => (
-                <div
-                  key={step.num}
-                  className="group p-4 rounded-xl border border-border hover:border-accent/30 hover:bg-bg-card-hover transition-all hover:-translate-y-1 duration-300"
-                  data-cursor-hover
-                >
-                  <span className="font-mono text-xs text-accent mb-2 block">
+        {/* Skills */}
+        <div className="glass-strong rounded-card p-5 md:p-6 sr">
+          <span className="font-mono text-[0.625rem] uppercase tracking-wider text-muted mb-4 block">
+            Skills &amp; Tools
+          </span>
+          <div className="flex flex-wrap gap-1.5">
+            {skills.map((skill) => (
+              <span
+                key={skill.name}
+                className={`px-2.5 py-1 rounded-full text-[0.6875rem] border transition-colors ${
+                  skill.highlight
+                    ? "bg-accent/10 border-accent/25 text-accent"
+                    : "bg-bg border-border text-muted hover:text-foreground"
+                }`}
+              >
+                {skill.name}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* From idea to launch */}
+        <div className="glass-strong rounded-card p-5 md:p-6 sr">
+          <span className="font-mono text-[0.625rem] uppercase tracking-wider text-muted mb-4 block">
+            From idea to launch
+          </span>
+          {/* Mobile: simple grid, no connectors */}
+          <div className="grid grid-cols-5 gap-2 sm:hidden">
+            {steps.map((step) => (
+              <div key={step.num}>
+                <span className="font-mono text-[0.625rem] text-accent block mb-1">
+                  {step.num}
+                </span>
+                <h4 className="font-display font-medium text-xs text-foreground">
+                  {step.title}
+                </h4>
+              </div>
+            ))}
+          </div>
+
+          {/* Desktop: flex with dashed connectors + stage dots */}
+          <div className="hidden sm:flex items-start gap-3">
+            {steps.map((step, i) => (
+              <Fragment key={step.num}>
+                <div className="shrink-0">
+                  <span className="font-mono text-[0.625rem] text-accent block mb-1">
                     {step.num}
                   </span>
-                  <h4 className="font-display font-bold text-sm text-foreground mb-1">
+                  <h4 className="font-display font-medium text-xs text-foreground whitespace-nowrap">
                     {step.title}
                   </h4>
-                  <p className="text-xs text-muted leading-relaxed">{step.desc}</p>
                 </div>
-              ))}
-            </div>
+                {i < steps.length - 1 && (
+                  <div className="flex-1 flex items-center gap-1.5 mt-[7px] min-w-[24px]">
+                    <span className="w-1 h-1 rounded-full bg-accent/70 shrink-0" />
+                    <div className="flex-1 border-t border-dashed border-muted/40" />
+                    <span className="w-1 h-1 rounded-full bg-accent/70 shrink-0" />
+                  </div>
+                )}
+              </Fragment>
+            ))}
           </div>
         </div>
       </div>

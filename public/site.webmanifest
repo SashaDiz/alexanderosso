@@ -1,0 +1,22 @@
+{
+  "name": "Aleksandr Borisov",
+  "short_name": "alexanderosso",
+  "description": "Solo founder, vibe-coder & product designer. Shipping 5 SaaS products solo from Buenos Aires.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#EFEEEC",
+  "theme_color": "#895FFF",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/apple-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

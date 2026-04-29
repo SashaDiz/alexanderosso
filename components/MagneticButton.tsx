@@ -9,6 +9,8 @@ interface MagneticButtonProps {
   href?: string;
   onClick?: () => void;
   dataCursorCta?: boolean;
+  target?: string;
+  rel?: string;
 }
 
 export default function MagneticButton({
@@ -17,6 +19,8 @@ export default function MagneticButton({
   href,
   onClick,
   dataCursorCta,
+  target,
+  rel,
 }: MagneticButtonProps) {
   const ref = useRef<HTMLElement>(null);
 
@@ -53,7 +57,7 @@ export default function MagneticButton({
 
   if (href) {
     return (
-      <a href={href} {...props}>
+      <a href={href} target={target} rel={rel} {...props}>
         {children}
       </a>
     );

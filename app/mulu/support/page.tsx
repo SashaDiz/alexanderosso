@@ -8,21 +8,21 @@ export const metadata = {
 export default function SupportPage() {
   return (
     <>
-      <main className="flex-1 w-full max-w-3xl px-6 py-20">
+      <main className="flex-1 w-full max-w-container px-5 py-12"><div className="glass-strong rounded-card p-6 md:p-8">
         <Link
           href="/mulu"
-          className="text-sm text-muted hover:text-foreground transition-colors mb-8 inline-block"
+          className="text-[0.6875rem] text-muted hover:text-foreground transition-colors mb-8 inline-block"
         >
           &larr; Mulu
         </Link>
 
-        <h1 className="font-display font-bold text-3xl mb-10">
+        <h1 className="font-display font-medium text-xl tracking-tight mb-6">
           Support — Mulu
         </h1>
 
-        <div className="space-y-8 text-base text-muted leading-relaxed">
+        <div className="space-y-6 text-xs text-muted leading-relaxed">
           <section>
-            <h2 className="text-accent font-display font-bold text-lg mb-2">
+            <h2 className="text-foreground font-display font-medium text-sm mb-2">
               Need Help?
             </h2>
             <p>
@@ -32,7 +32,7 @@ export default function SupportPage() {
           </section>
 
           <section>
-            <h2 className="text-accent font-display font-bold text-lg mb-2">
+            <h2 className="text-foreground font-display font-medium text-sm mb-2">
               Contact Us
             </h2>
             <p>
@@ -64,7 +64,7 @@ export default function SupportPage() {
             </p>
           </section>
         </div>
-      </main>
+      </div></main>
     </>
   );
 }
