@@ -3,71 +3,16 @@
 import { Fragment, useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { skills, stats, timeline as fullTimeline } from "@/lib/cv-data";
 
-const timeline = [
-  { role: "Solo Founder", company: "Independent", period: "2025 — now", desc: "5 SaaS products, building in public", active: true },
-  { role: "Product Designer", company: "MarsX", period: "2023 — 2026", desc: "SaaS & AI startup studio", active: false },
-  { role: "UI/UX Designer", company: "Instadapp", period: "2021 — 2023", desc: "DeFi, $10M Series A", active: false },
-  { role: "UI Designer", company: "LAD Network", period: "2020 — 2021", desc: "Browser extensions", active: false },
-];
-
-const skills = [
-  // Identity / process
-  { name: "Solo Founding", highlight: true },
-  { name: "Vibe Coding", highlight: true },
-  { name: "Claude Code", highlight: true },
-  { name: "Cursor", highlight: false },
-  { name: "Figma", highlight: false },
-  { name: "MVP Design", highlight: false },
-
-  // Web stack
-  { name: "Next.js", highlight: false },
-  { name: "React", highlight: false },
-  { name: "TypeScript", highlight: false },
-  { name: "Tailwind", highlight: false },
-  { name: "Shadcn/ui", highlight: false },
-  { name: "Zod", highlight: false },
-
-  // iOS
-  { name: "iOS / SwiftUI", highlight: false },
-  { name: "App Store Launch", highlight: false },
-
-  // Backend / infra / data
-  { name: "Supabase", highlight: false },
-  { name: "PostgreSQL", highlight: false },
-  { name: "Vercel", highlight: false },
-  { name: "Resend", highlight: false },
-
-  // Payments
-  { name: "Stripe", highlight: false },
-  { name: "RevenueCat", highlight: false },
-
-  // API integrations
-  { name: "Meta API", highlight: false },
-  { name: "X API", highlight: false },
-  { name: "TikTok API", highlight: false },
-  { name: "LinkedIn API", highlight: false },
-  { name: "Google API", highlight: false },
-  { name: "OAuth", highlight: false },
-
-  // AI
-  { name: "Anthropic API", highlight: false },
-  { name: "OpenAI API", highlight: false },
-
-  // Growth
-  { name: "SEO", highlight: false },
-  { name: "CRO", highlight: false },
-  { name: "A/B Testing", highlight: false },
-  { name: "PostHog", highlight: false },
-  { name: "PH Launch", highlight: false },
-];
-
-const stats = [
-  { value: "5", suffix: "", label: "Live products" },
-  { value: "10", suffix: "+", label: "Years designing" },
-  { value: "30", suffix: "%", label: "Avg CVR lift" },
-  { value: "6", suffix: "fig", label: "MRR scaled" },
-];
+// Homepage shows the four most recent roles in compact form.
+const timeline = fullTimeline.slice(0, 4).map((item) => ({
+  role: item.role,
+  company: item.company,
+  period: item.shortPeriod,
+  desc: item.shortDesc,
+  active: !!item.active,
+}));
 
 const steps = [
   { num: "01", title: "Idea" },

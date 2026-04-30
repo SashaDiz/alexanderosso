@@ -404,6 +404,119 @@ body::before {
   }
 }
 
+/* Print — produces a clean A4 PDF from any page using `Cmd+P`.
+   Overrides theme tokens to a forced light palette, removes glass
+   blur, hides chrome, and tightens spacing so the CV fits 1–2 pages. */
+@media print {
+  @page {
+    size: A4;
+    margin: 14mm;
+  }
+
+  :root,
+  [data-theme="dark"] {
+    --bg: 255 255 255;
+    --bg-card: 255 255 255;
+    --bg-card-hover: 255 255 255;
+    --accent: 137 95 255;
+    --accent-hover: 112 72 240;
+    --muted: 90 90 95;
+    --border: 220 218 213;
+    --foreground: 20 20 22;
+    --glass-bg: 255, 255, 255;
+    --glass-bg-alpha: 1;
+    --glass-bg-strong-alpha: 1;
+    --glass-border: 220, 218, 213;
+    --glass-border-alpha: 1;
+    --glass-highlight-alpha: 0;
+    --glass-shadow: 0, 0, 0;
+    --glass-shadow-alpha: 0;
+    --blob-1: transparent;
+    --blob-2: transparent;
+    --blob-3: transparent;
+    --blob-4: transparent;
+  }
+
+  html,
+  body {
+    background: #ffffff !important;
+    color: #141416 !important;
+  }
+
+  body::before,
+  body::after {
+    display: none !important;
+  }
+
+  nav,
+  .cursor-dot,
+  [data-print-hide] {
+    display: none !important;
+  }
+
+  * {
+    cursor: auto !important;
+  }
+
+  .glass,
+  .glass-strong,
+  .glass-button,
+  .glass-button-dark {
+    background: #ffffff !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border: 1px solid #dcdad5 !important;
+    box-shadow: none !important;
+  }
+
+  /* CV container — tighten for paper */
+  .cv-print {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    gap: 10px !important;
+    max-width: 100% !important;
+  }
+
+  .cv-print section,
+  .cv-print > div {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .cv-print .glass-strong {
+    padding: 16px 18px !important;
+  }
+
+  .cv-print h1 {
+    font-size: 1.625rem !important;
+  }
+
+  .cv-print h3,
+  .cv-print h4 {
+    font-size: 0.8125rem !important;
+  }
+
+  .cv-print p,
+  .cv-print li {
+    font-size: 0.75rem !important;
+    line-height: 1.45 !important;
+  }
+
+  /* Anti-flash: GSAP entrance starts at opacity-0; ensure print is always visible */
+  .cv-el {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  /* Hyperlinks — black, underlined, no hover transition */
+  a {
+    color: #141416 !important;
+    text-decoration: underline;
+  }
+}
+
 /* Forced colors (Windows High Contrast) — keep elements visible */
 @media (forced-colors: active) {
   .glass,
