@@ -26,7 +26,7 @@ const tabs: Tab[] = [
     id: "mvp",
     label: "MVP Build",
     title: "Idea to live URL",
-    basePrice: "$7,500+",
+    basePrice: "$4,500+",
     features: [
       "Your idea, designed and shipped end-to-end",
       "Onboarding, core flows, settings — the lot",
@@ -40,8 +40,8 @@ const tabs: Tab[] = [
     id: "landing",
     label: "Website & Landing",
     title: "Marketing site that converts",
-    basePrice: "$5,000+",
-    addOn: { label: "+ Motion", priceWith: "$6,500+" },
+    basePrice: "$2,000+",
+    addOn: { label: "+ Motion", priceWith: "$2,750+" },
     features: [
       "Copy, design and build — one head, no handoffs",
       "Three concepts, then we sharpen one",
@@ -56,7 +56,7 @@ const tabs: Tab[] = [
     id: "directory",
     label: "Directory",
     title: "Niche directory, indexed and ready to rank",
-    basePrice: "$4,000+",
+    basePrice: "$3,500+",
     features: [
       "Built on the playbook from my own directories",
       "Next.js front — fast and indexable",
@@ -193,7 +193,7 @@ function AddOnToggle({
         }`}
       >
         <span
-          className={`absolute top-[1px] left-[1px] h-[14px] w-[14px] rounded-full bg-foreground transition-transform duration-300 ease-out ${
+          className={`absolute top-[1px] left-[1px] h-3 w-3 rounded-full bg-foreground transition-transform duration-300 ease-out ${
             enabled ? "translate-x-3" : "translate-x-0"
           }`}
         />
@@ -433,7 +433,7 @@ export default function Services() {
 
             <div className="flex items-baseline gap-1 mb-5">
               <span className="font-display font-medium text-3xl md:text-4xl text-foreground tracking-tight">
-                $4,500
+                $3,500
               </span>
               <span className="text-muted text-sm">/mo</span>
             </div>
