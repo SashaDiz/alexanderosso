@@ -40,15 +40,15 @@ export default function Hero() {
             Aleksandr Borisov
           </p>
 
-          <h1 className="hero-el font-display font-medium text-2xl md:text-[2rem] leading-[1.2] tracking-tight text-foreground mb-4 opacity-0">
-            I design, code &amp; ship SaaS products{" "}
+          <h1 className="hero-el font-display font-medium text-2xl md:text-[2rem] leading-[1.2] tracking-tight text-foreground mb-4 opacity-0 text-balance">
+            I design, code &amp; ship digital products{" "}
             <span className="text-accent">solo with AI.</span>
           </h1>
 
           <p className="hero-el text-sm md:text-[0.9375rem] text-muted leading-relaxed mb-7 max-w-[55ch] opacity-0">
-            10 years designing for SaaS and startups. Now in my founder season —
-            five products live, all designed, coded, and launched solo with
-            Figma + Cursor + Claude Code.
+            10 years designing for SaaS, startups and mobile apps. Now in my
+            founder season — five products live, all designed, coded, and
+            launched solo with Figma + Cursor + Claude Code.
           </p>
 
           <div className="hero-el flex flex-wrap gap-2 opacity-0">
