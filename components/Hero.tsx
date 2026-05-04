@@ -26,14 +26,38 @@ export default function Hero() {
     <section ref={sectionRef} id="hero">
       <div className="max-w-container mx-auto px-5">
         <div className="glass-strong rounded-card p-7 md:p-10">
-          <div className="hero-el flex items-center gap-2 mb-7 opacity-0">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-60" />
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500" />
+          <div className="hero-el flex flex-wrap items-center gap-2 mb-7 opacity-0">
+            <span className="inline-flex items-center gap-2 text-xs text-muted">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-60" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500" />
+              </span>
+              5 products live
             </span>
-            <span className="text-xs text-muted">
-              5 products live · always shipping
+            <span
+              aria-hidden="true"
+              className="text-base leading-none text-muted/70 select-none"
+            >
+              ·
             </span>
+            <a
+              href="https://x.com/alexanderOsso"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-cursor-hover
+              className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-foreground/5 hover:bg-foreground/10 border border-foreground/10 text-[11px] text-foreground transition-colors"
+            >
+              <svg
+                aria-hidden="true"
+                width="10"
+                height="10"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
+              Building in public — follow @alexanderOsso
+            </a>
           </div>
 
           <p className="hero-el font-mono text-[0.6875rem] uppercase tracking-widest text-muted mb-3 opacity-0">

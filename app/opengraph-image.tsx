@@ -17,72 +17,89 @@ export default async function OGImage() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          padding: "72px 80px",
-          background: "#EFEEEC",
+          padding: "56px 64px",
+          background: "#E8E6E1",
           backgroundImage: `
-            radial-gradient(circle at 12% 18%, rgba(168, 132, 255, 0.45), transparent 55%),
-            radial-gradient(circle at 88% 30%, rgba(255, 154, 200, 0.40), transparent 55%),
-            radial-gradient(circle at 50% 95%, rgba(120, 145, 255, 0.40), transparent 55%),
-            radial-gradient(circle at 95% 92%, rgba(255, 200, 120, 0.32), transparent 55%)
+            radial-gradient(circle at 10% 15%, rgba(137, 95, 255, 0.55), transparent 50%),
+            radial-gradient(circle at 90% 25%, rgba(255, 130, 185, 0.50), transparent 50%),
+            radial-gradient(circle at 45% 100%, rgba(95, 130, 255, 0.50), transparent 55%),
+            radial-gradient(circle at 100% 95%, rgba(255, 195, 110, 0.40), transparent 50%)
           `,
           fontFamily: "Inter, sans-serif",
         }}
       >
-        {/* Top: status pill */}
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: 14,
-            fontSize: 22,
-            color: "#1A1A1A",
-            background: "rgba(255,255,255,0.55)",
-            border: "1px solid rgba(255,255,255,0.7)",
-            padding: "10px 18px",
-            borderRadius: 999,
-            alignSelf: "flex-start",
-            backdropFilter: "blur(20px)",
-          }}
-        >
+        {/* Top: status pill + X pin */}
+        <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
           <div
             style={{
-              width: 12,
-              height: 12,
+              display: "flex",
+              alignItems: "center",
+              gap: 12,
+              fontSize: 22,
+              color: "#0F0F0F",
+              background: "rgba(255,255,255,0.7)",
+              border: "1px solid rgba(255,255,255,0.85)",
+              padding: "10px 18px",
               borderRadius: 999,
-              background: "#10B981",
             }}
-          />
-          5 products live · always shipping
+          >
+            <div
+              style={{
+                width: 12,
+                height: 12,
+                borderRadius: 999,
+                background: "#10B981",
+              }}
+            />
+            5 products live
+          </div>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: 10,
+              fontSize: 22,
+              color: "#0F0F0F",
+              background: "rgba(15,15,15,0.08)",
+              border: "1px solid rgba(15,15,15,0.12)",
+              padding: "10px 18px",
+              borderRadius: 999,
+            }}
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#0F0F0F">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+            </svg>
+            Building in public — @alexanderOsso
+          </div>
         </div>
 
         {/* Middle: headline */}
-        <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: 22 }}>
           <div
             style={{
-              fontSize: 96,
+              fontSize: 88,
               fontWeight: 500,
-              color: "#1A1A1A",
+              color: "#0F0F0F",
               lineHeight: 1.05,
               letterSpacing: "-0.025em",
               display: "flex",
               flexDirection: "column",
             }}
           >
-            <span style={{ color: "#7C7B78" }}>Product designer</span>
-            <span>
-              turned <span style={{ color: "#895FFF" }}>solo founder.</span>
-            </span>
+            <span>I design, code &amp; ship</span>
+            <span style={{ color: "#895FFF" }}>solo with AI.</span>
           </div>
           <div
             style={{
-              fontSize: 28,
-              color: "#3A3A3A",
-              maxWidth: 950,
+              fontSize: 26,
+              color: "#1F1F1F",
+              maxWidth: 1000,
               lineHeight: 1.4,
             }}
           >
-            10 years designing for SaaS. Now shipping 5 products solo with
-            Figma + Cursor + Claude Code.
+            10 years designing for SaaS, startups &amp; mobile apps. Now in my
+            founder season — 5 products live, built solo with Figma + Cursor +
+            Claude Code.
           </div>
         </div>
 
@@ -93,12 +110,12 @@ export default async function OGImage() {
             justifyContent: "space-between",
             alignItems: "flex-end",
             fontSize: 24,
-            color: "#1A1A1A",
+            color: "#0F0F0F",
           }}
         >
           <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
             <div style={{ fontWeight: 500 }}>Aleksandr Borisov</div>
-            <div style={{ color: "#7C7B78", fontSize: 22 }}>
+            <div style={{ color: "#5A5955", fontSize: 22 }}>
               Buenos Aires · alexanderosso.com
             </div>
           </div>
@@ -107,7 +124,7 @@ export default async function OGImage() {
               display: "flex",
               gap: 12,
               fontSize: 18,
-              color: "#7C7B78",
+              color: "#5A5955",
               fontFamily: "monospace",
             }}
           >
