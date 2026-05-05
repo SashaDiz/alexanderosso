@@ -377,7 +377,7 @@ export default function Services() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-60" />
               <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-accent" />
             </span>
-            3 slots open
+            1 of 2 slots open
           </span>
         </div>
 
