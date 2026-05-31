@@ -1,5 +1,6 @@
 "use client";
 
+import { Fragment } from "react";
 import Image from "next/image";
 import {
   buildingNow,
@@ -66,7 +67,7 @@ function ProjectRow({ project }: { project: BuildingProject }) {
       href={project.url}
       target="_blank"
       rel="noopener noreferrer"
-      className="group flex items-center gap-4 py-4 border-b border-border last:border-b-0 hover:bg-bg-card-hover/50 transition-colors -mx-4 px-4 rounded-lg"
+      className="group flex items-center gap-4 py-4 hover:bg-bg-card-hover/50 transition-colors -mx-4 px-4 rounded-lg"
       data-cursor-hover
     >
       <ProjectThumb project={project} />
@@ -123,13 +124,18 @@ export default function NowBuilding() {
           </div>
 
           <p className="text-xs text-muted leading-relaxed mb-6 max-w-[60ch]">
-            Five SaaS products shipping in parallel — designed, coded, and
+            Six SaaS products shipping in parallel — designed, coded, and
             launched solo with Figma + Cursor + Claude Code.
           </p>
 
           <div className="flex flex-col">
-            {buildingNow.map((project) => (
-              <ProjectRow key={project.slug} project={project} />
+            {buildingNow.map((project, i) => (
+              <Fragment key={project.slug}>
+                <ProjectRow project={project} />
+                {i < buildingNow.length - 1 && (
+                  <div className="h-px bg-border" />
+                )}
+              </Fragment>
             ))}
           </div>
         </div>

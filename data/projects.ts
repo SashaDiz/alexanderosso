@@ -101,11 +101,11 @@ export const buildingNow: BuildingProject[] = [
   },
   {
     slug: "posteahora",
-    name: "PosteaHora",
+    name: "PosteAhora",
     tagline:
       "A social media management platform — schedule, publish, and manage all your accounts in one place.",
     description:
-      "Platform for managing social media accounts: draft, queue, and publish across channels from a single dashboard. Currently adding AI-agent capabilities to automate content workflows.",
+      "Social media management platform that plugs into AI agents to schedule and publish across all your accounts.",
     url: "https://posteahora.com/",
     status: "Soft launch",
     stage: "MVP",

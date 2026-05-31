@@ -88,12 +88,13 @@ export default function About() {
               end-to-end.
             </p>
             <p>
-              Five live now —{" "}
+              Six live now —{" "}
               <a href="https://www.mulujournal.app/" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-accent transition-colors">Mulu</a>,{" "}
               <a href="https://winery-hotels.com/" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-accent transition-colors">Winery&nbsp;Hotels</a>,{" "}
               <a href="https://directory-launch.com/" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-accent transition-colors">Directory&nbsp;Launch</a>,{" "}
-              <a href="https://getmomentum.online" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-accent transition-colors">Momentum</a>, and{" "}
-              <a href="https://posteahora.com/" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-accent transition-colors">PosteaHora</a>.
+              <a href="https://getmomentum.online" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-accent transition-colors">Momentum</a>,{" "}
+              <a href="https://ailaunch.space/" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-accent transition-colors">AI&nbsp;Launch&nbsp;Space</a>, and{" "}
+              <a href="https://posteahora.com/" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-accent transition-colors">PosteAhora</a>.
               Husband, father, mate &amp; wine enthusiast in between shipping.
             </p>
           </div>
@@ -105,7 +106,11 @@ export default function About() {
                 href={s.href}
                 target={s.href.startsWith("mailto:") ? undefined : "_blank"}
                 rel={s.href.startsWith("mailto:") ? undefined : "noopener noreferrer"}
-                className="px-2.5 py-1 rounded-full text-[0.6875rem] border border-border text-muted hover:text-foreground hover:border-foreground transition-colors"
+                className={
+                  s.label === "Upwork"
+                    ? "px-2.5 py-1 rounded-full text-[0.6875rem] font-medium border border-accent/30 bg-accent/15 text-accent hover:bg-accent/25 transition-colors"
+                    : "px-2.5 py-1 rounded-full text-[0.6875rem] border border-border text-muted hover:text-foreground hover:border-foreground transition-colors"
+                }
                 data-cursor-hover
               >
                 {s.label}
