@@ -9,31 +9,48 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 export function useGSAP() {
   useEffect(() => {
-    // Scroll reveal for all .sr elements
+    // Scroll reveal for all .sr elements.
+    // The glass containers only fade — animating transform on elements with
+    // backdrop-filter makes Chromium mis-sample the blur at the viewport edge
+    // (glitchy band at the bottom of cards). The rise is applied to children.
+    const reduceMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
     const srElements = document.querySelectorAll(".sr");
     srElements.forEach((el) => {
+      if (reduceMotion) {
+        gsap.set(el, { opacity: 1 });
+        return;
+      }
+
       const parent = el.parentElement;
       const siblings = parent
         ? Array.from(parent.querySelectorAll(":scope > .sr"))
         : [];
       const siblingIndex = siblings.indexOf(el as Element);
 
-      gsap.fromTo(
+      const tl = gsap.timeline({
+        delay: siblingIndex * 0.1,
+        scrollTrigger: {
+          trigger: el,
+          start: "top 88%",
+          once: true,
+        },
+      });
+      tl.fromTo(
         el,
-        { opacity: 0, y: 40 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.8,
-          delay: siblingIndex * 0.1,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: el,
-            start: "top 88%",
-            once: true,
-          },
-        }
+        { opacity: 0 },
+        { opacity: 1, duration: 0.8, ease: "power3.out" },
+        0
       );
+      if (el.children.length) {
+        tl.fromTo(
+          el.children,
+          { y: 28 },
+          { y: 0, duration: 0.8, ease: "power3.out", clearProps: "transform" },
+          0
+        );
+      }
     });
 
     // Smooth scroll for anchor links

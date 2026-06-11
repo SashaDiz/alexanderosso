@@ -32,7 +32,7 @@ export default function Hero() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-60" />
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500" />
               </span>
-              6 products live
+              7 products live
             </span>
             <span
               aria-hidden="true"
@@ -89,7 +89,7 @@ export default function Hero() {
 
           <p className="hero-el text-sm md:text-[0.9375rem] text-muted leading-relaxed mb-7 max-w-[55ch] opacity-0">
             10 years designing for SaaS, startups and mobile apps. Now in my
-            founder season — six products live, all designed, coded, and
+            founder season — seven products live, all designed, coded, and
             launched solo with Figma + Cursor + Claude Code.
           </p>
 

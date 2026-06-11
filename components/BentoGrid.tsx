@@ -4,6 +4,7 @@ import { Fragment, useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { skills, stats, timeline as fullTimeline } from "@/lib/cv-data";
+import PixelGlobe from "@/components/PixelGlobe";
 
 // Homepage shows the four most recent roles in compact form.
 const timeline = fullTimeline.slice(0, 4).map((item) => ({
@@ -108,39 +109,9 @@ export default function BentoGrid() {
             </div>
           </div>
 
-          <div className="glass-strong rounded-card p-5 md:p-6 relative overflow-hidden sr min-h-[180px]">
-            {/* Wireframe globe — peeking from bottom-right */}
-            <svg aria-hidden="true"
-              className="absolute -bottom-20 -right-20 sm:-bottom-28 sm:-right-28 w-[240px] h-[240px] sm:w-[300px] sm:h-[300px] text-foreground/25 pointer-events-none animate-spin-slow"
-              viewBox="0 0 200 200"
-              fill="none"
-              stroke="currentColor"
-              strokeLinecap="round"
-            >
-              {/* Outline */}
-              <circle cx="100" cy="100" r="92" strokeWidth="0.8" />
-
-              {/* Meridians */}
-              <ellipse cx="100" cy="100" rx="92" ry="92" strokeWidth="0.5" />
-              <ellipse cx="100" cy="100" rx="68" ry="92" strokeWidth="0.5" />
-              <ellipse cx="100" cy="100" rx="38" ry="92" strokeWidth="0.5" />
-              <line x1="100" y1="8" x2="100" y2="192" strokeWidth="0.5" />
-
-              {/* Parallels */}
-              <line x1="9" y1="100" x2="191" y2="100" strokeWidth="0.7" />
-              <ellipse cx="100" cy="100" rx="88" ry="44" strokeWidth="0.5" />
-              <ellipse cx="100" cy="100" rx="74" ry="70" strokeWidth="0.5" />
-
-              {/* Accent dotted equator overlay */}
-              <circle
-                cx="100"
-                cy="100"
-                r="92"
-                strokeDasharray="1 4"
-                strokeWidth="0.6"
-                stroke="rgb(var(--accent) / 0.5)"
-              />
-            </svg>
+          <div className="glass-strong rounded-card p-5 md:p-6 relative overflow-hidden isolate [contain:paint] sr min-h-[180px]">
+            {/* Pixel globe — peeking from bottom-right */}
+            <PixelGlobe className="absolute -bottom-20 -right-20 sm:-bottom-28 sm:-right-28 w-[240px] h-[240px] sm:w-[300px] sm:h-[300px] pointer-events-none" />
 
             {/* Pulse dot — back to top-right */}
             <div className="absolute top-4 right-4 flex h-2 w-2 z-10">

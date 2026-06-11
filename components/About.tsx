@@ -88,13 +88,14 @@ export default function About() {
               end-to-end.
             </p>
             <p>
-              Six live now —{" "}
+              Seven live now —{" "}
               <a href="https://www.mulujournal.app/" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-accent transition-colors">Mulu</a>,{" "}
               <a href="https://winery-hotels.com/" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-accent transition-colors">Winery&nbsp;Hotels</a>,{" "}
               <a href="https://directory-launch.com/" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-accent transition-colors">Directory&nbsp;Launch</a>,{" "}
               <a href="https://getmomentum.online" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-accent transition-colors">Momentum</a>,{" "}
-              <a href="https://ailaunch.space/" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-accent transition-colors">AI&nbsp;Launch&nbsp;Space</a>, and{" "}
-              <a href="https://posteahora.com/" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-accent transition-colors">PosteAhora</a>.
+              <a href="https://ailaunch.space/" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-accent transition-colors">AI&nbsp;Launch&nbsp;Space</a>,{" "}
+              <a href="https://posteahora.com/" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-accent transition-colors">PosteAhora</a>, and{" "}
+              <a href="https://besttravelapps.online/" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-accent transition-colors">TravelApps</a>.
               Husband, father, mate &amp; wine enthusiast in between shipping.
             </p>
           </div>

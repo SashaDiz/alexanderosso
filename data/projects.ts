@@ -117,6 +117,22 @@ export const buildingNow: BuildingProject[] = [
     thumbnail: "/projects/posteahora.png",
   },
   {
+    slug: "besttravelapps",
+    name: "TravelApps",
+    tagline:
+      "Curated directory of the best travel apps — booking, navigation, planning and more.",
+    description:
+      "Travel app directory helping travelers discover the right tools for their trips. 150+ apps indexed across booking, maps, planning and utilities.",
+    url: "https://besttravelapps.online/",
+    status: "Live",
+    stage: "Live",
+    stageNote: "Live · 150+ travel apps indexed",
+    launched: "2026 Q2",
+    stack: ["Next.js", "Directory", "Travel"],
+    gradient: "from-[#0A0A0A] to-[#134E4A]",
+    accentColor: "#2DD4BF",
+  },
+  {
     slug: "ailaunch",
     name: "AI Launch Space",
     tagline:

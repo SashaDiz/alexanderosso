@@ -124,7 +124,7 @@ export default function NowBuilding() {
           </div>
 
           <p className="text-xs text-muted leading-relaxed mb-6 max-w-[60ch]">
-            Six SaaS products shipping in parallel — designed, coded, and
+            Seven SaaS products shipping in parallel — designed, coded, and
             launched solo with Figma + Cursor + Claude Code.
           </p>
 

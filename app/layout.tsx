@@ -22,7 +22,7 @@ const SITE_NAME = "Aleksandr Borisov";
 const DEFAULT_TITLE =
   "Aleksandr Borisov — Solo founder, vibe-coder & product designer";
 const DEFAULT_DESCRIPTION =
-  "Solo founder shipping 6 SaaS products. 10 years designing for SaaS, AI, and DeFi at MarsX and Instadapp. Now building Mulu, Winery Hotels, Directory Launch, Momentum, AI Launch Space and PosteAhora — designed, coded, and launched solo from Buenos Aires.";
+  "Solo founder shipping 7 SaaS products. 10 years designing for SaaS, AI, and DeFi at MarsX and Instadapp. Now building Mulu, Winery Hotels, Directory Launch, Momentum, AI Launch Space, PosteAhora and TravelApps — designed, coded, and launched solo from Buenos Aires.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -116,7 +116,7 @@ const personJsonLd = {
   image: `${SITE_URL}/images/sasha.png`,
   jobTitle: "Solo Founder & Product Designer",
   description:
-    "Solo founder, vibe-coder, and product designer with 10 years of experience designing SaaS, AI, and DeFi products. Currently shipping six SaaS products end-to-end.",
+    "Solo founder, vibe-coder, and product designer with 10 years of experience designing SaaS, AI, and DeFi products. Currently shipping seven SaaS products end-to-end.",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Buenos Aires",

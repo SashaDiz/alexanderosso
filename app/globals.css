@@ -209,10 +209,10 @@ body::before {
   mix-blend-mode: normal;
 }
 
-/* Scroll reveal base */
+/* Scroll reveal base — opacity only: a transform here would break
+   backdrop-filter sampling on the glass cards (glitch at the bottom edge) */
 .sr {
   opacity: 0;
-  transform: translateY(40px);
 }
 
 /* Selection */
@@ -338,19 +338,6 @@ body::before {
   will-change: transform;
 }
 
-/* Slow rotation for the globe */
-@keyframes spin-slow {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.animate-spin-slow {
-  animation: spin-slow 90s linear infinite;
-  transform-origin: center;
-  will-change: transform;
-}
-
 /* Modal */
 @keyframes fade-in {
   from {
@@ -381,7 +368,6 @@ body::before {
 /* Respect reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .animate-marquee,
-  .animate-spin-slow,
   .animate-ping,
   .animate-pulse,
   .animate-fade-in,
