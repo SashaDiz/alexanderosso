@@ -9,8 +9,9 @@ import { useContact } from "./ContactProvider";
 const navItems = [
   { label: "Building", href: "#building" },
   { label: "Services", href: "#services" },
-  { label: "Past Work", href: "#work" },
+  { label: "Portfolio", href: "#work" },
   { label: "About", href: "#about" },
+  { label: "Blog", href: "https://sashaosso.writizzy.blog/" },
 ];
 
 export default function Nav() {
@@ -69,16 +70,21 @@ export default function Nav() {
 
           {/* Desktop: nav items */}
           <div className="hidden sm:flex items-center gap-0.5">
-            {navItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                className="px-2.5 py-1 text-[11px] text-muted hover:text-foreground transition-colors"
-                data-cursor-hover
-              >
-                {item.label}
-              </a>
-            ))}
+            {navItems.map((item) => {
+              const isExternal = item.href.startsWith("http");
+              return (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  target={isExternal ? "_blank" : undefined}
+                  rel={isExternal ? "noopener noreferrer" : undefined}
+                  className="px-2.5 py-1 text-[11px] text-muted hover:text-foreground transition-colors"
+                  data-cursor-hover
+                >
+                  {item.label}
+                </a>
+              );
+            })}
           </div>
 
           {/* Right: a11y toggles + CTA */}
@@ -118,16 +124,21 @@ export default function Nav() {
         {/* Mobile: nav items in their own glass pill */}
         <div className="sm:hidden mt-2 glass rounded-full px-3 py-1.5">
           <div className="flex items-center gap-4 overflow-x-auto justify-between">
-            {navItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                className="text-[11px] text-muted hover:text-foreground whitespace-nowrap transition-colors"
-                data-cursor-hover
-              >
-                {item.label}
-              </a>
-            ))}
+            {navItems.map((item) => {
+              const isExternal = item.href.startsWith("http");
+              return (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  target={isExternal ? "_blank" : undefined}
+                  rel={isExternal ? "noopener noreferrer" : undefined}
+                  className="text-[11px] text-muted hover:text-foreground whitespace-nowrap transition-colors"
+                  data-cursor-hover
+                >
+                  {item.label}
+                </a>
+              );
+            })}
           </div>
         </div>
       </div>

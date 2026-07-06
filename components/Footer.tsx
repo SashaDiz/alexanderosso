@@ -3,6 +3,7 @@ const links = [
   { label: "LinkedIn", href: "https://www.linkedin.com/in/borisovaleksandr/" },
   { label: "Behance", href: "https://www.behance.net/aleksandrborisov" },
   { label: "Upwork", href: "https://www.upwork.com/freelancers/~01b291538e885c464c?mp_source=share" },
+  { label: "Blog", href: "https://sashaosso.writizzy.blog/" },
   { label: "CV", href: "/cv" },
   { label: "Email", href: "mailto:hello@alexanderosso.com" },
 ];

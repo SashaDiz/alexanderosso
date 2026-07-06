@@ -146,6 +146,7 @@ const personJsonLd = {
     "https://www.linkedin.com/in/borisovaleksandr/",
     "https://www.behance.net/aleksandrborisov",
     "https://www.upwork.com/freelancers/~01b291538e885c464c",
+    "https://sashaosso.writizzy.blog/",
   ],
   worksFor: {
     "@type": "Organization",

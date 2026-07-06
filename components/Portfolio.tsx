@@ -9,7 +9,7 @@ export default function Portfolio() {
         <div className="glass-strong rounded-card p-6 md:p-8 sr">
           <div className="flex items-center justify-between mb-5">
             <h2 className="font-display font-medium text-base text-foreground">
-              Past work
+              Portfolio
             </h2>
             <span className="font-mono text-[0.625rem] uppercase tracking-wider text-muted">
               Where I cut my teeth

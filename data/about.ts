@@ -15,6 +15,7 @@ export const socials = [
     label: "Upwork",
     href: "https://www.upwork.com/freelancers/~01b291538e885c464c?mp_source=share",
   },
+  { label: "Blog", href: "https://sashaosso.writizzy.blog/" },
   { label: "Email", href: "mailto:hello@alexanderosso.com" },
   { label: "CV ↓", href: "/cv-aleksandr-borisov.pdf" },
 ];

@@ -59,6 +59,29 @@ export default function Hero() {
               Building in public — follow @alexanderOsso
             </a>
             <a
+              href="https://sashaosso.writizzy.blog/"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-cursor-hover
+              className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-foreground/5 hover:bg-foreground/10 border border-foreground/10 text-[11px] text-foreground transition-colors"
+            >
+              <svg
+                aria-hidden="true"
+                width="11"
+                height="11"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M12 20h9" />
+                <path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z" />
+              </svg>
+              Read the blog
+            </a>
+            <a
               href="https://www.upwork.com/freelancers/~01b291538e885c464c?mp_source=share"
               target="_blank"
               rel="noopener noreferrer"
