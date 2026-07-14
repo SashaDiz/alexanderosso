@@ -31,6 +31,24 @@ export type BuildingProject = {
 
 export const buildingNow: BuildingProject[] = [
   {
+    slug: "posteahora",
+    name: "PosteAhora",
+    tagline:
+      "Put your social media on autopilot with AI agents — plan, write, and schedule posts across every platform.",
+    description:
+      "An MCP for AI agents that puts your social media on autopilot. Connect Claude, ChatGPT, Cursor, or OpenClaw with a single URL — your agent plans, writes, and schedules posts across every platform, right from the chat.",
+    url: "https://posteahora.com/",
+    status: "Live",
+    stage: "Live",
+    stageNote: "Live · AI-agent publishing via MCP",
+    launched: "2025 Q2",
+    stack: ["Next.js", "Social", "AI"],
+    gradient: "from-[#0A0A0A] to-[#312E81]",
+    accentColor: "#6366F1",
+    featured: true,
+    thumbnail: "/projects/posteahora.png",
+  },
+  {
     slug: "mulu",
     name: "Mulu",
     tagline:
@@ -98,23 +116,6 @@ export const buildingNow: BuildingProject[] = [
     gradient: "from-[#1E1B4B] to-[#0A0A0A]",
     accentColor: "#818CF8",
     thumbnail: "/projects/momentum.png",
-  },
-  {
-    slug: "posteahora",
-    name: "PosteAhora",
-    tagline:
-      "A social media management platform — schedule, publish, and manage all your accounts in one place.",
-    description:
-      "Social media management platform that plugs into AI agents to schedule and publish across all your accounts.",
-    url: "https://posteahora.com/",
-    status: "Soft launch",
-    stage: "MVP",
-    stageNote: "Soft launch · adding AI-agent features",
-    launched: "2025 Q2",
-    stack: ["Next.js", "Social", "AI"],
-    gradient: "from-[#0A0A0A] to-[#312E81]",
-    accentColor: "#6366F1",
-    thumbnail: "/projects/posteahora.png",
   },
   {
     slug: "besttravelapps",
