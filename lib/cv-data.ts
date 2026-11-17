@@ -31,7 +31,7 @@ export const summary =
   "Product Designer with 10 years of experience in SaaS and AI, focused on growth-driven UX/UI and conversion optimization. Over the past 5 years I've helped startups scale products from MVP to five- and six-figure recurring revenue, leading the design process from concept to launch.";
 
 export const stats: StatItem[] = [
-  { value: "7", suffix: "", label: "Live products" },
+  { value: "5", suffix: "", label: "Live products" },
   { value: "10", suffix: "+", label: "Years designing" },
   { value: "30", suffix: "%", label: "Avg CVR lift" },
   { value: "6", suffix: "fig", label: "MRR scaled" },

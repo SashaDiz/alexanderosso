@@ -51,7 +51,7 @@ export default async function OGImage() {
                 background: "#10B981",
               }}
             />
-            7 products live
+            5 products live
           </div>
           <div
             style={{
@@ -98,7 +98,7 @@ export default async function OGImage() {
             }}
           >
             10 years designing for SaaS, startups &amp; mobile apps. Now in my
-            founder season — 7 products live, built solo with Figma + Cursor +
+            founder season — 5 products live, built solo with Figma + Cursor +
             Claude Code.
           </div>
         </div>
@@ -128,15 +128,15 @@ export default async function OGImage() {
               fontFamily: "monospace",
             }}
           >
-            <span>mulu</span>
-            <span>·</span>
             <span>winery-hotels</span>
             <span>·</span>
             <span>directory-launch</span>
             <span>·</span>
-            <span>momentum</span>
+            <span>ailaunch</span>
             <span>·</span>
             <span>posteahora</span>
+            <span>·</span>
+            <span>appshift</span>
           </div>
         </div>
       </div>

@@ -49,25 +49,6 @@ export const buildingNow: BuildingProject[] = [
     thumbnail: "/projects/posteahora.png",
   },
   {
-    slug: "mulu",
-    name: "Mulu",
-    tagline:
-      "Digital detox journal — track screen-free moments, build mindful habits.",
-    description:
-      "iOS journal app helping people log offline time and build healthier digital habits. Designed end-to-end, built for App Store launch.",
-    url: "https://www.mulujournal.app/",
-    internalUrl: "/mulu",
-    status: "Live",
-    stage: "Live",
-    stageNote: "v1 on App Store · iterating onboarding",
-    launched: "2025 Q1",
-    stack: ["iOS", "Next.js", "AI"],
-    gradient: "from-[#0A0A0A] to-[#1F1B3D]",
-    accentColor: "#7FB069",
-    featured: true,
-    thumbnail: "/mulu/icon.png",
-  },
-  {
     slug: "winery-hotels",
     name: "Winery Hotels",
     tagline:
@@ -102,38 +83,6 @@ export const buildingNow: BuildingProject[] = [
     thumbnail: "/projects/directory-launch.png",
   },
   {
-    slug: "momentum",
-    name: "Momentum",
-    tagline: "Build daily momentum — habit and focus tracker for indie makers.",
-    description:
-      "Lightweight habit and focus tracker designed for solo founders. Daily streaks, deep-work timers, no-bloat interface.",
-    url: "https://getmomentum.online",
-    status: "Beta",
-    stage: "Beta",
-    stageNote: "Open beta · onboarding first 100 users",
-    launched: "2025 Q2",
-    stack: ["Next.js", "Productivity"],
-    gradient: "from-[#1E1B4B] to-[#0A0A0A]",
-    accentColor: "#818CF8",
-    thumbnail: "/projects/momentum.png",
-  },
-  {
-    slug: "besttravelapps",
-    name: "TravelApps",
-    tagline:
-      "Curated directory of the best travel apps — booking, navigation, planning and more.",
-    description:
-      "Travel app directory helping travelers discover the right tools for their trips. 150+ apps indexed across booking, maps, planning and utilities.",
-    url: "https://besttravelapps.online/",
-    status: "Live",
-    stage: "Live",
-    stageNote: "Live · 150+ travel apps indexed",
-    launched: "2026 Q2",
-    stack: ["Next.js", "Directory", "Travel"],
-    gradient: "from-[#0A0A0A] to-[#134E4A]",
-    accentColor: "#2DD4BF",
-  },
-  {
     slug: "ailaunch",
     name: "AI Launch Space",
     tagline:
@@ -149,6 +98,64 @@ export const buildingNow: BuildingProject[] = [
     gradient: "from-[#0A0A0A] to-[#1E3A8A]",
     accentColor: "#60A5FA",
     thumbnail: "/projects/ailaunch.png",
+  },
+  {
+    slug: "appshift",
+    name: "AppShift",
+    tagline: "Small apps. Calmer phones. — an independent iOS app studio.",
+    description:
+      "Independent iOS app studio shipping small, focused iPhone apps — digital detox, morning routines, private cycle tracking, and language learning. Designed, coded, and launched solo.",
+    url: "https://appshift.xyz/",
+    status: "Live",
+    stage: "Live",
+    stageNote: "Live · 5 apps shipped on the App Store",
+    launched: "2025 Q4",
+    stack: ["iOS", "Swift", "App Studio"],
+    gradient: "from-[#0A0A0A] to-[#451A03]",
+    accentColor: "#FB923C",
+    featured: true,
+  },
+];
+
+// Apps shipped under the AppShift studio — shown in a dedicated apps block.
+export type AppProject = {
+  slug: string;
+  name: string;
+  tagline: string;
+  url: string;
+  icon?: string;
+  accentColor: string;
+};
+
+export const appshiftApps: AppProject[] = [
+  {
+    slug: "mulu",
+    name: "Mulu",
+    tagline: "A gentle digital detox journal.",
+    url: "https://www.mulujournal.app/",
+    icon: "/mulu/icon.png",
+    accentColor: "#7FB069",
+  },
+  {
+    slug: "mivu",
+    name: "Mivu",
+    tagline: "A morning ritual for your body — yoga unlocks your phone.",
+    url: "https://apps.apple.com/us/app/mivu-morning-routine-yoga/id6817517526",
+    accentColor: "#F59E0B",
+  },
+  {
+    slug: "lunami",
+    name: "Lunami",
+    tagline: "Private period & cycle tracker — no account needed.",
+    url: "https://apps.apple.com/app/lunami-private-period-tracker/id6818124454",
+    accentColor: "#F472B6",
+  },
+  {
+    slug: "capi",
+    name: "Capi",
+    tagline: "Learn Spanish from short, funny video clips.",
+    url: "https://apps.apple.com/us/app/capi%C3%B1ol-learn-spanish-slang/id6828250894",
+    accentColor: "#FBBF24",
   },
 ];
 

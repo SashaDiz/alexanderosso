@@ -6,6 +6,7 @@ import Nav from "@/components/Nav";
 import SkipLink from "@/components/SkipLink";
 import Hero from "@/components/Hero";
 import NowBuilding from "@/components/NowBuilding";
+import AppshiftApps from "@/components/AppshiftApps";
 import BentoGrid from "@/components/BentoGrid";
 import Services from "@/components/Services";
 import Portfolio from "@/components/Portfolio";
@@ -30,6 +31,8 @@ export default function Home() {
         <Hero />
         <Divider />
         <NowBuilding />
+        <Divider />
+        <AppshiftApps />
         <Divider />
         <BentoGrid />
         <Divider />
