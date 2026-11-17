@@ -38,7 +38,16 @@ function ProjectThumb({ project }: { project: BuildingProject }) {
     <div
       className={`relative w-11 h-11 rounded-xl overflow-hidden bg-gradient-to-br ${project.gradient} flex items-center justify-center shrink-0 ring-1 ring-foreground/10`}
     >
-      {project.thumbnail ? (
+      {project.thumbnail?.endsWith(".svg") ? (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          src={project.thumbnail}
+          alt={project.name}
+          width={44}
+          height={44}
+          className="w-7 h-7 rounded-md"
+        />
+      ) : project.thumbnail ? (
         <Image
           src={project.thumbnail}
           alt={project.name}

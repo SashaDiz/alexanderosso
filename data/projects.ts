@@ -114,6 +114,7 @@ export const buildingNow: BuildingProject[] = [
     gradient: "from-[#0A0A0A] to-[#451A03]",
     accentColor: "#FB923C",
     featured: true,
+    thumbnail: "/projects/appshift.svg",
   },
 ];
 
@@ -141,6 +142,7 @@ export const appshiftApps: AppProject[] = [
     name: "Mivu",
     tagline: "A morning ritual for your body — yoga unlocks your phone.",
     url: "https://apps.apple.com/us/app/mivu-morning-routine-yoga/id6817517526",
+    icon: "/appshift/mivu.png",
     accentColor: "#F59E0B",
   },
   {
@@ -148,6 +150,7 @@ export const appshiftApps: AppProject[] = [
     name: "Lunami",
     tagline: "Private period & cycle tracker — no account needed.",
     url: "https://apps.apple.com/app/lunami-private-period-tracker/id6818124454",
+    icon: "/appshift/lunami.png",
     accentColor: "#F472B6",
   },
   {
@@ -155,6 +158,7 @@ export const appshiftApps: AppProject[] = [
     name: "Capi",
     tagline: "Learn Spanish from short, funny video clips.",
     url: "https://apps.apple.com/us/app/capi%C3%B1ol-learn-spanish-slang/id6828250894",
+    icon: "/appshift/capi.png",
     accentColor: "#FBBF24",
   },
 ];
